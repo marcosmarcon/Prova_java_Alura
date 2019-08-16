@@ -86,12 +86,12 @@ public class HomeController {
 	    usuarioDao.gravar(usuario);
 	    
 	    Usuario usuario2 = new Usuario(); 
-	    usuario.setNome("User");
-	    usuario.setEmail("user@casadocodigo.com.br");
-	    usuario.setRoles(Arrays.asList(roleUser));
+	    usuario2.setNome("User");
+	    usuario2.setEmail("user@casadocodigo.com.br");
+	    usuario2.setRoles(Arrays.asList(roleUser));
 	    String senhaCriptografado = new BCryptPasswordEncoder().encode("123456");
-	    usuario.setSenha(senhaCriptografado);
-		usuarioDao.gravar(usuario);
+	    usuario2.setSenha(senhaCriptografado);
+		usuarioDao.gravar(usuario2);
 	    
 		return "Url Mágica executada";
 	}
