@@ -85,7 +85,7 @@ public class HomeController {
 	    usuario.setRoles(Arrays.asList(roleAdmin));
 	    usuarioDao.gravar(usuario);
 	    
-	    Usuario usuario = new Usuario(); 
+	    Usuario usuario2 = new Usuario(); 
 	    usuario.setNome("User");
 	    usuario.setEmail("user@casadocodigo.com.br");
 	    usuario.setRoles(Arrays.asList(roleUser));
