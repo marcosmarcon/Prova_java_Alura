@@ -85,17 +85,10 @@ public class HomeController {
 	    usuario.setRoles(Arrays.asList(roleAdmin));
 	    usuarioDao.gravar(usuario);
 	    
-	    Usuario usuario2 = new Usuario(); 
-	    usuario2.setNome("User");
-	    usuario2.setEmail("$2a$10$lt7pS7Kxxe5JfP.vjLNSyOXP11eHgh7RoPxo5fvvbMCZkCUss2DGu");
-	    usuario2.setSenha("123456");
-	    usuario2.setRoles(Arrays.asList(roleUser));
-	    usuarioDao.gravar(usuario2);
-	    
-	    Usuario usuario3 = new Usuario(); 
-	    usuario3.setNome("User3");
-	    usuario3.setEmail("user3@casadocodigo.com.br");
-	    usuario3.setRoles(Arrays.asList(roleUser));
+	    Usuario usuario = new Usuario(); 
+	    usuario.setNome("User");
+	    usuario.setEmail("user@casadocodigo.com.br");
+	    usuario.setRoles(Arrays.asList(roleUser));
 	    String senhaCriptografado = new BCryptPasswordEncoder().encode("123456");
 	    usuario3.setSenha(senhaCriptografado);
 		usuarioDao.gravar(usuario3);
